@@ -156,5 +156,5 @@ SECTIONS
 	
     /* Stack */
     PROVIDE(__stack = ORIGIN(CCM) + LENGTH(CCM));
-    PROVICE(__heap_end = ORIGIN(IRAM) + LENGTH(IRAM));
+    PROVIDE(__heap_end = ORIGIN(IRAM) + LENGTH(IRAM));
 }
