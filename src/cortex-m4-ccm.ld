@@ -40,8 +40,6 @@ SECTIONS
 		PROVIDE(__copy_size = .); LONG(SIZEOF(.copytable));
 		PROVIDE(__zero_addr = .); LONG(ADDR(.zerotable));
 		PROVIDE(__zero_size = .); LONG(SIZEOF(.zerotable));
-		PROVIDE(__ccm_addr = .); LONG(ADDR(.ccm));
-		PROVIDE(__ccm_size = .); LONG(SIZEOF(.ccm));
 	} > IROM
 	
 	.devices :
@@ -158,4 +156,5 @@ SECTIONS
 	
     /* Stack */
     PROVIDE(__stack = ORIGIN(CCM) + LENGTH(CCM));
+    PROVICE(__heap_end = ORIGIN(IRAM) + LENGTH(IRAM));
 }
